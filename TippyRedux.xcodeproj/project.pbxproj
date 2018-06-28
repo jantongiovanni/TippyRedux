@@ -12,9 +12,12 @@
 		918ADCAA20E54DCC00C27DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918ADCA820E54DCC00C27DAB /* Main.storyboard */; };
 		918ADCAC20E54DCC00C27DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918ADCAB20E54DCC00C27DAB /* Assets.xcassets */; };
 		918ADCAF20E54DCC00C27DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918ADCAD20E54DCC00C27DAB /* LaunchScreen.storyboard */; };
+		B186D19ACD4A266073FDB1D5 /* Pods_TippyRedux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8347D27A8588A9A7DE233E0 /* Pods_TippyRedux.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34FEC95DF99192BC9312FBBB /* Pods-TippyRedux.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TippyRedux.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TippyRedux/Pods-TippyRedux.debug.xcconfig"; sourceTree = "<group>"; };
+		36F67D17A61FDA1418FD50C8 /* Pods-TippyRedux.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TippyRedux.release.xcconfig"; path = "Pods/Target Support Files/Pods-TippyRedux/Pods-TippyRedux.release.xcconfig"; sourceTree = "<group>"; };
 		918ADCA120E54DCC00C27DAB /* TippyRedux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TippyRedux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		918ADCA420E54DCC00C27DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		918ADCA620E54DCC00C27DAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		918ADCAB20E54DCC00C27DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		918ADCAE20E54DCC00C27DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		918ADCB020E54DCC00C27DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8347D27A8588A9A7DE233E0 /* Pods_TippyRedux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TippyRedux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B186D19ACD4A266073FDB1D5 /* Pods_TippyRedux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79B36DDF7FC83616BA2A7A80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34FEC95DF99192BC9312FBBB /* Pods-TippyRedux.debug.xcconfig */,
+				36F67D17A61FDA1418FD50C8 /* Pods-TippyRedux.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		918ADC9820E54DCC00C27DAB = {
 			isa = PBXGroup;
 			children = (
 				918ADCA320E54DCC00C27DAB /* TippyRedux */,
 				918ADCA220E54DCC00C27DAB /* Products */,
+				79B36DDF7FC83616BA2A7A80 /* Pods */,
+				F4267E1D150F31F763539355 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = TippyRedux;
 			sourceTree = "<group>";
 		};
+		F4267E1D150F31F763539355 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8347D27A8588A9A7DE233E0 /* Pods_TippyRedux.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 918ADCB320E54DCC00C27DAB /* Build configuration list for PBXNativeTarget "TippyRedux" */;
 			buildPhases = (
+				90369A2EB1CE0E78AB80F3B6 /* [CP] Check Pods Manifest.lock */,
 				918ADC9D20E54DCC00C27DAB /* Sources */,
 				918ADC9E20E54DCC00C27DAB /* Frameworks */,
 				918ADC9F20E54DCC00C27DAB /* Resources */,
@@ -130,6 +155,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90369A2EB1CE0E78AB80F3B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TippyRedux-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		918ADC9D20E54DCC00C27DAB /* Sources */ = {
@@ -272,6 +318,7 @@
 		};
 		918ADCB420E54DCC00C27DAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34FEC95DF99192BC9312FBBB /* Pods-TippyRedux.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +333,7 @@
 		};
 		918ADCB520E54DCC00C27DAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36F67D17A61FDA1418FD50C8 /* Pods-TippyRedux.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
