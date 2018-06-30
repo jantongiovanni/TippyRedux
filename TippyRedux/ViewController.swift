@@ -1,4 +1,3 @@
-
 //
 //  ViewController.swift
 //  TippyRedux
@@ -17,13 +16,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var customField: UITextField!
-    //var customTip = 0.0
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        let tipPos = UserDefaults.standard.integer(forKey: "tip")
+        let themePos = UserDefaults.standard.integer(forKey: "theme")
+        tipControl.selectedSegmentIndex = tipPos
+        
+        if themePos == 0{
+            mainView.setGradientBackground(colorOne: .orange, colorTwo: .yellow)
+            UITextField.appearance().keyboardAppearance = .light
+            print("light")
 
+        }
+        else{
+            mainView.setGradientBackground(colorOne: .purple, colorTwo: .black)
+            UITextField.appearance().keyboardAppearance = .dark
+            print("dark")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         customField.isHidden = true
-        view.setGradientBackground(colorOne: .black, colorTwo: .purple)
+        self.billField.becomeFirstResponder()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,10 +54,6 @@ class ViewController: UIViewController {
     
     @IBAction func segmentTap(_ sender: Any) {
         let getIndex = tipControl.selectedSegmentIndex
-        if(getIndex == 3){
-            print("Custom")
-            
-        }
         switch(getIndex){
         case 0:
             customField.isHidden = true
@@ -52,10 +65,9 @@ class ViewController: UIViewController {
             customField.isHidden = false
         default:
             customField.isHidden = true
-
         }
-        
     }
+    
     @IBAction func calculateTip(_ sender: Any) {
         let customTip = Double(customField.text!) ?? 0
         let tipPercentages = [0.1, 0.15, 0.2, customTip]
