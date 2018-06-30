@@ -24,7 +24,8 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Color gradient for the background
+- [x] Color gradient for the background (Actual gradient doesnt have lines in it, thats just gif compression)
+- [x] Custom tip amount
 
 ## Video Walkthrough 
 
